@@ -33,8 +33,10 @@
 
 Для реализации основного меню можно использовать пример ниже или написать свой
 """
-
+Account = 0
+history = []
 while True:
+    print('денег на счету:' + str(Account))
     print('1. пополнение счета')
     print('2. покупка')
     print('3. история покупок')
@@ -42,11 +44,20 @@ while True:
 
     choice = input('Выберите пункт меню')
     if choice == '1':
-        pass
+        sum = input('на сколько пополнить счет')
+        Account += sum
     elif choice == '2':
-        pass
+        sum = Input('стоимость покупки?')
+        if (sum <= Account):
+            print('Денег достаточно')
+            break
+        else:
+            print('недостаточно средств!')
+            break
+            good = input('название товара?')
+            history.append(good + str(sum))
     elif choice == '3':
-        pass
+        print(history)
     elif choice == '4':
         break
     else:
