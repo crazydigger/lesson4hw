@@ -45,9 +45,9 @@ while True:
     choice = input('Выберите пункт меню')
     if choice == '1':
         sum = input('на сколько пополнить счет')
-        Account += sum
+        Account += int(sum)
     elif choice == '2':
-        sum = Input('стоимость покупки?')
+        sum = int(input('стоимость покупки?'))
         if (sum <= Account):
             print('Денег достаточно')
             break

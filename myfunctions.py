@@ -10,7 +10,7 @@ def simple_separator():
     return '**********'
 
 
-print('11111111111111111', simple_separator() == '**********')  # True
+print(simple_separator() == '**********')  # True
 print('=================', simple_separator())
 
 
@@ -20,10 +20,10 @@ def long_separator(count):
     return "*" * count
 
 
-print('22222222222', long_separator(3) == '***')  # True
-print('33333333333', long_separator(4) == '****')  # True
-print('444444444444', long_separator(3))  # True
-print('55555555555', long_separator(4))  # True
+print(long_separator(3) == '***')  # True
+print(long_separator(4) == '****')  # True
+print(long_separator(3))  # True
+print(long_separator(4))  # True
 
 
 def separator(simbol, count):
@@ -57,9 +57,9 @@ def hello_who(who='World'):
     # Функция печатает приветствие в красивом формате
     # **********
     simple_separator()
-    print('Hello {who}!'.format(who))
+    print('Hello ' + who + '!')
 
-    long_separator('#', 10)
+    separator('#', 10)
     #:param who: кого мы приветствуем, по умолчанию World
 
     return None
@@ -116,7 +116,7 @@ def print_key_val(**kwargs):
     # value - значение параметра
     # param kwargs: любое количество именованных параметров
     for key, value in kwargs.items():
-        print("лkey{key} --> {value}".format(key, value))
+        print(key, ' -->', value)
 
     return
 
