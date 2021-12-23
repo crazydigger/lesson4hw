@@ -33,8 +33,8 @@ def separator(simbol, count):
     return simbol * count
 
 
-print(separator('6666666666666666', '-', 10) == '----------')  # True
-print(separator('7777777777777777', '#', 5) == '#####')  # True
+print(separator('-', 10) == '----------')  # True
+print(separator('#', 5) == '#####')  # True
 
 
 def hello_world():
@@ -62,16 +62,15 @@ def hello_who(who='World'):
     long_separator('#', 10)
     #:param who: кого мы приветствуем, по умолчанию World
 
+    return None
 
-return None
 
-'''
-**********
+# **********
 
-Hello World!
+# Hello World!
 
 ##########
-'''
+
 hello_who()
 
 # **********
@@ -117,47 +116,47 @@ def print_key_val(**kwargs):
     # value - значение параметра
     # param kwargs: любое количество именованных параметров
     for key, value in kwargs.items():
-        print("лkey{} --> {}".format(key, value))
+        print("лkey{key} --> {value}".format(key, value))
 
     return
 
 
-name --> Max
-age --> 21
+# name --> Max
+# age --> 21
 
 print_key_val(name='Max', age=21)
 
-animal --> Cat
-is_animal --> True
+# animal --> Cat
+# is_animal --> True
 
 print_key_val(animal='Cat', is_animal=True)
 
 
 def my_filter(iterable, function):
-    (Усложненое задание со *)
-    Функция
-    фильтрует
-    последовательность
-    iterable
+    # (Усложненое задание со *)
+    # Функция
+    # фильтрует
+    # последовательность
+    # iterable
     и
-    возвращает
-    новую
-    Если
-    function
-    от
-    элемента
-    последовательности
-    возвращает
-    True, то
-    элемент
-    входит
-    в
-    новую
-    последовательность
-    иначе
-    нет
-    (примеры ниже)
-    #:param iterable: входаня последовательности
+    # возвращает
+    # новую
+    # Если
+    # function
+    # от
+    # элемента
+    # последовательности
+    # возвращает
+    # True, то
+    # элемент
+    # входит
+    # в
+    # новую
+    # последовательность
+    # иначе
+    # нет
+    # (примеры ниже)
+    ##:param iterable: входаня последовательности
     # param function: функция фильтрации
     # return: новая отфильтрованная последовательность
     new_l = []
