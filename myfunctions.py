@@ -87,16 +87,19 @@ hello_who('Max')
 # Hello Kate!
 
 ##########
-'''
+
 hello_who('Kate')
 
 
 def pow_many(power, *args):
     
-    #Функция складывает любое количество цифр и возводит результат в степень power (примеры использования ниже)
+    # Функция складывает любое количество цифр и возводит результат в степень power (примеры использования ниже)
     #:param power: степень
     #:param args: любое количество цифр
-    return: результат вычисления # True -> (1 + 2)**power
+    sum = 0
+    for arg in args:
+        sum += arg
+    return sum ** power
     
     
 
@@ -109,39 +112,60 @@ print(pow_many(2, 1, 2, 3, 4) == 100)  # True -> (1 + 2 + 3 + 4)**2 == 10**2 == 
 
 
 def print_key_val(**kwargs):
-    """
-    Функция выводит переданные параметры в фиде key --> value
-    key - имя параметра
-    value - значение параметра
-    :param kwargs: любое количество именованных параметров
-    :return: None
-    """
-    pass
+    # Функция выводит переданные параметры в фиде key --> value
+    # key - имя параметра
+    # value - значение параметра
+    # param kwargs: любое количество именованных параметров
+    for key, value in kwargs.items():
+        print("лkey{} --> {}".format(key, value))
+
+    return
 
 
-"""
 name --> Max
 age --> 21
-"""
+
 print_key_val(name='Max', age=21)
-"""
+
 animal --> Cat
 is_animal --> True
-"""
+
 print_key_val(animal='Cat', is_animal=True)
 
 
 def my_filter(iterable, function):
-    """
     (Усложненое задание со *)
-    Функция фильтрует последовательность iterable и возвращает новую
-    Если function от элемента последовательности возвращает True, то элемент входит в новую последовательность иначе нет
+    Функция
+    фильтрует
+    последовательность
+    iterable
+    и
+    возвращает
+    новую
+    Если
+    function
+    от
+    элемента
+    последовательности
+    возвращает
+    True, то
+    элемент
+    входит
+    в
+    новую
+    последовательность
+    иначе
+    нет
     (примеры ниже)
-    :param iterable: входаня последовательности
-    :param function: функция фильтрации
-    :return: новая отфильтрованная последовательность
-    """
-    pass
+    #:param iterable: входаня последовательности
+    # param function: функция фильтрации
+    # return: новая отфильтрованная последовательность
+    new_l = []
+    for i in iterable:
+        if function(i):
+            new_l.append(i)
+
+    return new_l
 
 
 print(my_filter([1, 2, 3, 4, 5], lambda x: x > 3) == [4, 5])  # True
